@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS titantech_db;
+CREATE DATABASE titantech_db;

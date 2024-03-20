@@ -1,0 +1,27 @@
+{
+  "name": "titan-tech-blog",
+  "version": "1.0.0",
+  "description": "A web based application that uses sequelize to create a blog post application that dynamically generates new posts to a users dashboard.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
+  },
+  "keywords": [
+    "Blog",
+    "Tech"
+  ],
+  "author": "Jakeb Jackson",
+  "license": "MIT",
+  "engines": {
+    "node": "20.11.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.3",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.18.0",
+    "sequelize": "^6.37.1"
+  }
+}
