@@ -1,9 +1,3 @@
-const newPostBtn = document.querySelector('#new-post-btn');
-const newPostModal = document.querySelector('#new-post-modal')
-
-newPostBtn.addEventListener('shown.bs.modal', () => {
-    newPostModal.focus();
-});
 
 
 const newPostHandler = async (event) => {

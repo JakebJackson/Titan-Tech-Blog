@@ -1,42 +1,59 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
-
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
+<main class="min-vh-100">
+  <!-- This div will display user-specific databases and images -->
+  <div class="text-dark">
+    <h2 class="text-center mt-5 pt-4 fs-1">Welcome to the Titan Tech Blog</h2>
+    <h3 class="text-center mb-5 pt-4 fs-3">Please login or signup to continue</h3>
   </div>
-  <div class="col-md-6">
-    <h2>Signup</h2>
 
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
+  <div class="container py-4 text-bg-dark border border-4 border-primary rounded-5 shadow">
+    <section id="login-signup-section">
+      <div class="mx-5 my-5">
+        <h2 class="mb-5">Login</h2>
+
+        <form class="form login-form">
+          <div class="mb-3">
+            <label class="form-label fs-4" for="email-login">Email:</label>
+            <input class="form-control" type="text" id="email-login" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label fs-4" for="password-login">Password:</label>
+            <input class="form-control" type="password" id="password-login" />
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-lg btn-primary" type="submit">Login</button>
+          </div>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
+
+      <hr />
+
+      <div class="m-5">
+        <h2 class="mb-5">Signup</h2>
+
+        <form class="form signup-form">
+          <div class="mb-3">
+            <label class="form-label fs-4" for="name-signup">Name:</label>
+            <input class="form-control" type="text" id="name-signup" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label fs-4" for="email-signup">Email:</label>
+            <input class="form-control" type="text" id="email-signup" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label fs-4" for="password-signup">Password:</label>
+            <input class="form-control" type="password" id="password-signup" />
+            <div id="password-help" class="form-text text-white-50">Password must be 8 or more characters.</div>
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-lg btn-primary" type="submit">Signup</button>
+          </div>
       </div>
-      <div class="form-group">
-        <label for="password-signup">password (8 or more chars):</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
+      </form>
+    </section>
   </div>
-</div>
+</main>
+
+
+
 
 <script src="./js/login.js"></script>

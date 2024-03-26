@@ -27,4 +27,19 @@ router.post('/new-post', async (req, res) => {
 
 });
 
+router.delete('/delete/:id', async (req, res) => {
+    try{
+        const postID = parseInt(req.params.id);
+        console.log(`Post ID: ${req.params.id}`);
+
+        await Posts.destroy({ where: { post_id: postID } });
+
+        res.status(204).end();
+    }
+    catch (error) {
+        console.error('Error deleting image:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
 module.exports = router;
