@@ -1,15 +1,69 @@
-<main>
-    <section id="blog-post-section">
-        <!-- This div will display user-specific databases and images -->
-        <h2 class="m-5">Welcome back: {{user.username}}</h3>
-        <div class="container-lg">
-            <div class="row">
-                {{#each user.posts}}
-                <div class="card border shadow w-25">
-                    
+<main class="min-vh-100">
+    <!-- This div will display user-specific databases and images -->
+    <div class="text-dark">
+        <h2 class="text-center mt-5 pt-4 fs-1">Welcome Back</h2>
+        <h2 class="text-center mb-5 fs-2">{{user.username}}</h2>
+    </div>
+    <div class="container mt-4 py-4 text-bg-dark border border-4 border-primary rounded-5 shadow">
+        <section id="blog-post-section ">
+            <div class="container-lg">
+                <div class="row justify-content-between">
+                    <div class="col">
+                        <h3 class="m-4 fs-1">Post Feed</h3>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-lg btn-primary w-50 m-4 float-end" id="new-post-btn"
+                            data-bs-toggle="modal" data-bs-target="#new-post-modal">New Post...</button>
+                    </div>
+                </div>
+
+                <div class="modal" tabindex="-1" aria-hidden="true" id="new-post-modal">
+                    <!-- New post modal -->
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content bg-dark">
+                            <div class="modal-header">
+                                <h1 class="ms-4">Create a new post...</h1>
+                            </div>
+
+                            <div class="modal-body">
+                                <form class="p-4">
+                                    <div class="mb-3">
+                                        <label for="post-title-input" class="form-label">Post Title</label>
+                                        <input type="text" class="form-control" id="post-title-input"
+                                            aria-describedby="tileDesc">
+                                        <div id="titleDesc" class="form-text text-light">Title may be up to 30
+                                            characters.
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="post-text-area" class="form-label vh-25">Post Text</label>
+                                        <textarea type="text" class="form-control" id="post-text-area"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" id="post-submit-btn">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{#each posts}}
+                <div class="card border border-3 border-primary rounded-5 bg-dark text-light m-4">
+                    <div class="card-body mx-4">
+                        <h5 class="card-title fs-1">{{this.post_title}}</h3>
+                        <h6 class="card-subtitle">By {{this.post_author}}</footer>
+                        <hr/>
+                        <p class="card-body">{{this.post_content}}</p>
+                    </div>
                 </div>
                 {{/each}}
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </main>
+
+<script>const curUser = '{{user.username}}'</script>
+<script src="./js/app.js"></script>

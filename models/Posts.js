@@ -15,8 +15,15 @@ Posts.init(
         post_title: {
             type: DataTypes.STRING,
             allowNull: true,
+            validate: {
+                len: [0,30],
+            },
         },
         post_content: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        },
+        post_author: {
             type: DataTypes.STRING,
             allowNull: false,
         },
