@@ -83,7 +83,7 @@ The GitHub repository can be found [here.](https://github.com/JakebJackson/Titan
 The deployed web application can be found [here.](https://titan-tech-blog-31e5e4d9a022.herokuapp.com/)
 
 ## Screenshots / Video of Completed Challenge
-![completed application](/client/src/images/DeployedTitanTech.png)
+![Deployed Application](/public/images/DeployedTitanTech.png)
 
 ## License
 This project is licensed under the MIT.
